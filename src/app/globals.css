@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-gold-glow: rgba(197, 160, 89, 0.25);
+  --color-burgundy: #4A0E1A;
+}
+
+/* Base Body Luxury Styling */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #171311;
+  font-family: var(--font-plus-jakarta);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Text Selection */
+::selection {
+  background-color: #4A0E1A;
+  color: #DFC17B;
+}
+
+/* Luxury Gold & Serif Headings */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-cormorant);
+}
+
+/* Subtle Film-Grain Paper Noise Overlay */
+.luxury-noise {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #8C6A28 0%, #C5A059 40%, #E8D3A0 70%, #9F792F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.burgundy-gradient-text {
+  background: linear-gradient(135deg, #350912 0%, #6E1B2D 50%, #4A0E1A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Double-Bezel Hardware Nested Architecture */
+.double-bezel {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(244, 239, 230, 0.8) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.22);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  box-shadow: 0 10px 30px -10px rgba(74, 14, 26, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.double-bezel-inner {
+  background: #FFFFFF;
+  border: 1px solid rgba(197, 160, 89, 0.12);
+  border-radius: calc(2rem - 0.5rem);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DFC17B;
+  border-radius: 9999px;
+  border: 2px solid #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
